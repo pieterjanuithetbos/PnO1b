@@ -1,4 +1,6 @@
 # todo zorg dat microswitch na het indrukken nog als botsingsensor kan dienen
+# de bedoeling is dat de functie wordt aangesproken voor de auto begint met rijden
+# de functie zou moeten starten wanneer een botsingsensor (welke?) wordt ingedrukt
 
 microswitch = digitalio.DigitalInOut(board.GP0)
 microswitch.direction = digitalio.Direction.OUTPUT
