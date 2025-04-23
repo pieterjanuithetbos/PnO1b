@@ -3,7 +3,7 @@
 # de functie zou moeten starten wanneer een botsingsensor (welke?) wordt ingedrukt
 
 microswitch = digitalio.DigitalInOut(board.GP0)
-microswitch.direction = digitalio.Direction.OUTPUT
+microswitch.direction = digitalio.Direction.INPUT
 
 def onderzoek_ondergrond():
     op_knop_gedrukt = False
@@ -59,4 +59,5 @@ def onderzoek_ondergrond():
         LDR_links_procent = (LDR_links_value - min_links) / (max_links - min_links)
         LDR_rechts_procent = (LDR_rechts_value - min_rechts) / (max_rechts - min_rechts)
         LDR_achter_procent = (LDR_achter_value - min_achter) / (max_achter - min_achter)
-    return LDR_links_procent, LDR_rechts_procent, LDR_achter_procent
+        LDR_links_procent, LDR_rechts_procent, LDR_achter_procent
+    return max_links, max_rechts, max_achter, min_links, min_rechts, min_achter
