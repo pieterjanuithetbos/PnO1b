@@ -7,7 +7,7 @@ naar LINKS
 # LDR_rechts = AnalogIn(board.GP27)
 # LDR_achter = AnalogIn(board.GP28)
 
-TRAGER = 0.2
+TRAGER = 0.2 * 65535
 
 # DRAAI 1: vertraag op het einde
 
